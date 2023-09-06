@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <h1>Product Entry</h1>
+        <hr/>
+        <div>
+            Product Id:<input id="txtpid" type="text" value="" />
+            Product Name:<input id="txtpname" type="text" value="" />
+            Product Type:<select id="ddltype">
+                <option>Select</option>
+                <option>Mobile</option>
+                <option>TV</option>
+            </select>
+            Product Price:<input id="txtprice" type="text" value="" />
+            <input type="button" value="Save" onclick="addProduct()" />
+            <input type="button" value="Reset" />
+            <div id="msg">
+            </div>
+            <hr/>
+            <h2>Product List</h2>
+            <hr/>
+            <div id="productdata">
+                    <!-- //table data -->
+            </div>
+        </div>
+        <script src="product.js"></script>
+    </body>
+</html>
+

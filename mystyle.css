@@ -1,0 +1,17 @@
+.menustyle{
+    display: inline-block;
+    color:aqua;
+}
+#supplierdetails{
+    background-color: aquamarine;
+}
+body{
+    margin: 0;
+}
+li{
+    font-family: Arial, Helvetica, sans-serif;
+}
+li:hover{
+   color:red; 
+   border: 2px solid blue;
+}

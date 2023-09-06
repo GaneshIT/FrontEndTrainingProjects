@@ -1,0 +1,65 @@
+DOM - Document object model
+
+Html is a DOM. 
+it wil be hierarchical order
+
+HTMl5 semantic elements:
+why semantic elements?
+    rendering fast
+    browser easily understand web page
+    content
+->table
+->nav
+->header
+->footer
+->article
+->aside
+->section
+
+
+CSS - to apply web style
+
+1. inline css
+2. internal css
+3. external css(recommended)
+
+CSS Rules:
+    Rule 1: Dot(.) -> class(reuse)
+    Rule 2: # ->tag id or control id
+    Rule 3: tagname ->html tags or user defined tags
+
+css functions:
+    :hover
+    :out
+    :before
+    :after
+
+javascript: client side scripting.
+1. inline js
+2. internal js
+3. external js(recommended)
+
+javascript datatypes:
+->var (global scope)
+->let (local scope) - typescript language
+
+javascript functions:
+
+    function functionName(){
+        //statments
+        return //
+    }
+
+DOM Access in javascript
+
+javascript events
+->onclick
+->onchange
+->onkeypress
+->onkeyup
+->onblur
+->onfocus
+->onmouseover
+->onmouseout
+->ondoubleclick
+->onload
