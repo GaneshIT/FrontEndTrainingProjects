@@ -1,6 +1,12 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
+import AddMovie from './components/addmovie';
+import Bookings from './components/bookings copy';
+import Contact from './components/contact';
+import User from './components/user';
 function Menubar(){
     return(
+      <BrowserRouter>
         <div>
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="#">Navbar</a>
@@ -11,19 +17,19 @@ function Menubar(){
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        <Link class="nav-link" to={"/"} >Home <span class="sr-only">(current)</span></Link>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Movies</a>
+        <Link class="nav-link" to={"/movies"}>Movies</Link>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Bookings</a>
+        <Link class="nav-link" to={"/bookings"}>Bookings</Link>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">User</a>
+        <Link class="nav-link" to={"/user"}>User</Link>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Contact</a>
+        <Link class="nav-link" to={"/contact"}>Contact</Link>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
@@ -32,7 +38,14 @@ function Menubar(){
     </form>
   </div>
             </nav>
+            <Routes>
+              <Route path="/" element={<AddMovie></AddMovie>}></Route>
+              <Route path="/bookings" element={<Bookings></Bookings>}></Route>
+              <Route path="/user" element={<User></User>}></Route>
+              <Route path="/contact" element={<Contact></Contact>}></Route>
+            </Routes>
         </div>
+      </BrowserRouter>
     );
 }
 export default Menubar;
