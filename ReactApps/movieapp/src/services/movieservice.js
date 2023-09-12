@@ -16,8 +16,13 @@ class MovieService{
     .catch(err=>msg=err)
     return msg;
     }
-    getMovies(){
-        return ''
+   async getMovies(){
+        var result=[];
+        await  fetch(this.getApiBaseUrl()+'Movie/GetAll')
+        .then(res=>res.json())//response
+        .then(res=>result=res)//Access response
+        .catch(err=>result=result.push(err))
+        return result;
     }
 }
 export default new MovieService();

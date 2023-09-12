@@ -8,12 +8,14 @@ class AddMovie extends React.Component{
             name:'',
             description:'',
             type:'',
-            msg:''
+            msg:'',
+            movieList:[]
         }
         this.setMovieName=this.setMovieName.bind(this);
         this.setMovieDesc=this.setMovieDesc.bind(this);
         this.setMovieType=this.setMovieType.bind(this);
         this.saveMovie=this.saveMovie.bind(this);
+        this.getMovies=this.getMovies.bind(this);
     }
     setMovieName(e){
         //how to change state property value->setState()
@@ -33,6 +35,15 @@ class AddMovie extends React.Component{
        var result=await movieservice.createMovie(data);
           this.setState({msg:result})
         }
+async getMovies(){
+    
+  var result=await  movieservice.getMovies();//json array
+  this.setState({movieList:result});//render() trigger
+  //this.forceUpdate()//render trigger
+}
+componentDidMount(){
+   this.getMovies();
+}
     render(){
         return(
             <div>
@@ -54,6 +65,33 @@ class AddMovie extends React.Component{
                     <input type="button" value="Reset" className="btn btn-secondary" />
                 </form>
                 <div>{this.state.msg}</div>
+                <hr/>
+                <h2>Movie List</h2>
+                <hr />
+                <table className='table table-bordered table-striped'>
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Name</th>
+                            <th>Desc</th>
+                            <th>Type</th>
+                            <th>Edit</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {this.state.movieList.map((obj)=>(
+                            <tr>
+                                <td>{obj.id}</td>
+                                <td>{obj.name}</td>
+                                <td>{obj.description}</td>
+                                <td>{obj.type}</td>
+                                <td><button className='btn btn-info'>Edit</button></td>
+                                <td><button className='btn btn-danger'>Delete</button></td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
             </div>
         );
     }
