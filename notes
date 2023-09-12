@@ -63,3 +63,63 @@ javascript events
 ->onmouseout
 ->ondoubleclick
 ->onload
+
+Callback function
+
+setTimeout()
+setInterval()
+
+->splice
+How to delete an element from the array?
+
+
+Bootstrap Css:
+
+RWD - Responsive Web Design
+
+Steps:
+
+1. add meta tag and define screen size
+2. add bootstrap css file
+3. add container
+
+
+bootstrap form classes
+
+1. form-group
+2. form-control
+
+bootstrap Grid
+1. Row & Column based
+2. Every row should be 12 column
+
+Breakpoints:
+
+ xs-very small
+ sm-small
+ md -medium
+ lg-large
+ xl-x large
+
+
+
+https://getbootstrap.com/
+
+
+ Promise
+ Async/await
+
+
+ var result =new Promise(resolve,reject){
+    var age=20;
+    if(age>20)
+        resolve("Eligible")//success
+    else
+        reject("Not Eligible")
+ }
+
+var output=result.then().then().catch();
+ console.log(output);
+
+
+ 

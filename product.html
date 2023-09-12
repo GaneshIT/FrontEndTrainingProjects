@@ -1,20 +1,39 @@
 <!DOCTYPE html>
 <html>
-    <head></head>
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    </head>
     <body>
-        <h1>Product Entry</h1>
+        <div class="container-fluid">
+            <h1 class="display-1">Product Entry</h1>
+        <hr/>
+        <div><h2 id="todaydate"></h2></div>
         <hr/>
         <div>
-            Product Id:<input id="txtpid" type="text" value="" />
-            Product Name:<input id="txtpname" type="text" value="" />
-            Product Type:<select id="ddltype">
-                <option>Select</option>
-                <option>Mobile</option>
-                <option>TV</option>
-            </select>
-            Product Price:<input id="txtprice" type="text" value="" />
-            <input type="button" value="Save" onclick="addProduct()" />
-            <input type="button" value="Reset" />
+            <div class="form-group">
+                <label>Product Id</label>
+                <input id="txtpid" type="text" value="" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label>Product Name</label>
+                <input id="txtpname" type="text" value="" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label>Product Type</label>
+                <select id="ddltype" class="form-control">
+                    <option>Select</option>
+                    <option>Mobile</option>
+                    <option>TV</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Price</label>
+                <input id="txtprice" type="text" value="" class="form-control" />
+            </div>
+            <input type="button" value="Save" onclick="addProduct()" class="btn btn-primary" />
+            <input type="button" value="Reset" class="btn btn-secondary" />
             <div id="msg">
             </div>
             <hr/>
@@ -24,6 +43,8 @@
                     <!-- //table data -->
             </div>
         </div>
+        </div>
+        
         <script src="product.js"></script>
     </body>
 </html>
