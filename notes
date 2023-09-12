@@ -121,7 +121,23 @@ https://getbootstrap.com/
 var output=result.then().then().catch();
  console.log(output);
 
-
- 
-
  State & Props
+
+
+React Routing setup:
+install command
+->npm install react-router-dom
+
+in html <a href="url">
+
+Route -> Url localhost:3000/bookings
+       Route Path- bookings
+in react <Link to={"movies"}>   
+    <Route path="movies">
+    ->render <movieComponet>
+         <Link to={"bookings"}> ->render <bookingsComponet>
+         <Link to={"user"}> ->render <userComponet>
+         <Link to={"contact"}> ->render <contactComponet>
+
+
+
