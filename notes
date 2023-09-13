@@ -141,3 +141,22 @@ in react <Link to={"movies"}>
 
 
 
+
+React Hooks:
+    Functional component
+1. useState() -> to implment state logi into function component
+2. useEffect() -> it will trigger automatically  if any changes in functional component
+3. useContext()->to avoid call tree components and pass data directly to any component
+4. useReducer(); - update data in the database or datacontext
+
+
+
+<C1></C1>
+
+<C2></C2>
+
+<C3></C3> -> title
+
+useContext() -
+
+var myTitle= createContext(title)
